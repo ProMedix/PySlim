@@ -33,6 +33,12 @@ class DateUtils:
     def nowIsoUtc(self):
         return self.nowUtc().isoformat() + "Z"
 
+    def nowIsoWeekDay(self):
+        return self.now().isoweekday()
+
+    def nowUtcIsoWeekDay(self):
+        return self.nowUtc().isoweekday()
+
     def addSecondsTo(self,sec, dt):
         return d.strptime(dt, "%Y-%m-%d %H:%M:%S.%f") + timedelta(seconds = int(sec))
 
