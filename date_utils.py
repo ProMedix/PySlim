@@ -29,6 +29,12 @@ class DateUtils:
 
     def nowIso(self):
         return self.now().isoformat()
+    
+    def nowIsoWeekDay(self):
+        return self.now().isoweekday()
+    
+    def nowUtcIsoWeekDay(self):
+        return self.nowUtc().isoweekday()
 
     def nowIsoUtc(self):
         return self.nowUtc().isoformat() + "Z"
